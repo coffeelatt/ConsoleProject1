@@ -133,7 +133,7 @@
         static void MinionRender(Position minion)
         {
             Console.SetCursorPosition(minion.x, minion.y);
-            
+            Console.WriteLine('M');
             
 
         }
@@ -277,8 +277,8 @@
             static bool Exit(Position playerpos, Position button, ConsoleKey key)
             //hidden 과 동일하지만 지점과 지점이 겹쳐서 되는것이 아닌 지점과 지점이 겹친후 b버튼을 누르면 작동.
             {
-                Console.SetCursorPosition(button.x, button.y);
-                bool su = (playerpos.x == button.x) && (playerpos.y == button.y) && (key == ConsoleKey.B);//?????  Console.ReadKey()=="b" ?...어케넣지
+                Console.SetCursorPosition(button.x, button.y); // 좌표값 + 키 입력까지 맞아야 클리어.
+                bool su = (playerpos.x == button.x) && (playerpos.y == button.y) && (key == ConsoleKey.B);
                 {
                     return su;
                 }
